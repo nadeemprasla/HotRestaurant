@@ -68,7 +68,13 @@ var demoTable = [
 // ============================================================
 
 app.get("/", function(req, res){
+    res.sendFile(path.join(__dirname,"index.html"));
+});
+app.get("/view", function(req, res){
     res.sendFile(path.join(__dirname,"view.html"));
+});
+app.get("/make", function(req, res){
+    res.sendFile(path.join(__dirname,"make.html"));
 });
 
 app.listen(PORT, function() {
