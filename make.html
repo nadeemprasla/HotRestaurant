@@ -19,39 +19,39 @@
             <hr class="my-4">
             <h3 style="text-align: center;">Book your seat with us today!</h3>
             <div class="selectbtn" style="text-align: center;">
-                    <span>
-                            <a class="btn btn-primary btn-lg" href="/view" role="button">View Reservation</a>
-                            <a class="btn btn-primary btn-lg" href="/make" role="button">Make Reservation</a>
-                        </span>
+                <span>
+                    <a class="btn btn-primary btn-lg" href="/view" role="button">View Reservation</a>
+                    <a class="btn btn-primary btn-lg" href="/make" role="button">Make Reservation</a>
+                </span>
             </div>
 
         </div>
 
 
-        <form style="border: 1px black solid;padding: 15px;box-shadow: 1px 1px 10px 10px;margin-bottom: 30px;">
+        <form action="/add" method="POST" style="border: 1px black solid;padding: 15px;box-shadow: 1px 1px 10px 10px;margin-bottom: 30px;">
             <div class="form-group">
                 <label for="name">First and Last Name</label>
-                <input class="form-control" id="name" placeholder="Enter First and Last Name">
+                <input name="name" class="form-control" id="name" placeholder="Enter First and Last Name">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                <input name="email" type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
                 <small class="form-text text-muted">We'll never share your email with anyone
                     else.</small>
             </div>
             <div class="form-group">
                 <label for="">Phone #</label>
-                <input type="number" class="form-control" id="pnumber" placeholder="Phone Number">
+                <input name="phoneNumber" type="number" class="form-control" id="pnumber" placeholder="Phone Number">
                 <small class="form-text text-muted">We'll never share your phone # with anyone
                     else.</small>
             </div>
             <div class="form-group">
-                <label for="">Date</label>
-                <input type="date" class="form-control" id="date" placeholder="Date">
+                <label for="date">Date</label>
+                <input name="date" type="date" class="form-control" id="date" placeholder="Date">
             </div>
             <div class="form-group">
-                <label for="">Time</label>
-                <input type="time" class="form-control" id="time" placeholder="Time">
+                <label for="time">Time</label>
+                <input name="time" type="time" class="form-control" id="time" placeholder="Time">
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
