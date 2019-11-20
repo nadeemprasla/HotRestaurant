@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         
-    <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="./assest/index.css" type="text/css">
 
     <title></title>
 </head>
@@ -16,11 +16,11 @@
 <body>
     <div class="container">
 
-        <div class="jumbotron" style="">
+        <div class="jumbotron">
             <h1 class="display-4">Still in Development!</h1>
             <hr class="my-4">
-            <h3 style="text-align: center;">Book your seat with us today!</h3>
-            <div class="selectbtn" style="text-align: center;">
+            <h3>Book your seat with us today!</h3>
+            <div class="selectbtn">
                 <span>
                     <a class="btn btn-primary btn-lg" href="/view" role="button">View Reservation</a>
                     <a class="btn btn-primary btn-lg" href="/make" role="button">Make Reservation</a>
@@ -30,7 +30,7 @@
         </div>
 
 
-        <form action="/add" method="POST" style="border: 1px black solid;padding: 15px;box-shadow: 1px 1px 10px 10px;margin-bottom: 30px;">
+        <form action="/add" method="POST" class="userForm">
             <div class="form-group">
                 <label for="name">First and Last Name</label>
                 <input name="name" class="form-control" id="name" placeholder="Enter First and Last Name">
