@@ -45,27 +45,30 @@
         $(document).ready(() => {
 
 
-                $('#reservations').append("<table id='viewTable'>");
-                $('#viewTable').append("<tr>");
-                $('#viewTable').append("<th>Name</th>");
-                $('#viewTable').append("<th>Date</th>");
-                $('#viewTable').append("<th>Time</th>");
-                $('#viewTable').append("<th>Phone</th>");
-                $('#viewTable').append("<th>eMail</th>");
-                $.get("api/table", function (data, err) {
-                    data.forEach(
-                        function (e) {
-                            $('#viewTable').append('<tr>');
-                            $('#viewTable').append('<td>' + e.name + '</td>');
-                            $('#viewTable').append('<td>' + e.date + '</td>');
-                            $('#viewTable').append('<td>' + e.time + '</td>');
-                            $('#viewTable').append('<td>' + e.phoneNumber + '</td>');
-                            $('#viewTable').append('<td>' + e.email + '</td>');
-                            console.log(e);
-                        }
-                    )
-                });
-            }
+            $('#reservations').append("<table id='viewTable'>");
+            $('#viewTable').append("<tr>");
+            $('#viewTable').append("<th>Name</th>");
+            $('#viewTable').append("<th>Date</th>");
+            $('#viewTable').append("<th>Time</th>");
+            $('#viewTable').append("<th>Phone</th>");
+            $('#viewTable').append("<th>eMail</th>");
+            $.get("api/table", function (data, err) {
+                data.forEach(
+                    function (e) {
+                        $('#viewTable').append('<tr>');
+                        $('#viewTable').append('<td>' + e.name + '</td>');
+                        $('#viewTable').append('<td>' + e.date + '</td>');
+                        $('#viewTable').append('<td>' + e.time + '</td>');
+                        $('#viewTable').append('<td>' + e.phoneNumber + '</td>');
+                        $('#viewTable').append('<td>' + e.email + '</td>');
+                        console.log(e);
+                    }
+                )
+            });
+
+
+
+        }
         )
     </script>
 

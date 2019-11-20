@@ -28,6 +28,8 @@ app.use(express.urlencoded({ extend: true }));
 app.use(express.json());
 app.use(express.static('public'))
 
+pageCount = 0;
+
 
 var demoTable = [{
         name: "Name1",
@@ -67,20 +69,20 @@ var demoTable = [{
 // ============================================================
 
 app.get("/", function(req, res) {
+    pageCount++;
     res.sendFile(path.join(__dirname, "public/index.html"));
 });
 app.get("/view", function(req, res) {
+    pageCount++;
     res.sendFile(path.join(__dirname, "public/view.html"));
-
+    
 });
 app.get("/make", function(req, res) {
+    pageCount++;
     res.sendFile(path.join(__dirname, "public/make.html"));
 });
 app.get("/api/table", function(req, res){
     res.json(demoTable);
-});
-app.get("/make", function(req, res){
-    res.sendFile(path.join(__dirname,"make.html"));
 });
 
 
@@ -91,7 +93,7 @@ app.post("/add", function(req, res) {
 
         demoTable.push(req.body)
         console.log(demoTable)
-        res.sendFile(path.join(__dirname, "make.html"));
+        res.sendFile(path.join(__dirname, "public/make.html"));
     }
 })
 
