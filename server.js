@@ -63,7 +63,6 @@ var demoTable = [{
     },
 
 ];
-
 // Routes
 // ============================================================
 
@@ -76,6 +75,12 @@ app.get("/view", function(req, res) {
 });
 app.get("/make", function(req, res) {
     res.sendFile(path.join(__dirname, "public/make.html"));
+});
+app.get("/api/table", function(req, res){
+    res.json(demoTable);
+});
+app.get("/make", function(req, res){
+    res.sendFile(path.join(__dirname,"make.html"));
 });
 
 
