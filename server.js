@@ -26,6 +26,7 @@ var PORT = 8080;
 
 app.use(express.urlencoded({ extend: true }));
 app.use(express.json());
+app.use(express.static('public'))
 
 
 var demoTable = [{
@@ -67,14 +68,14 @@ var demoTable = [{
 // ============================================================
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "public/index.html"));
 });
 app.get("/view", function(req, res) {
-    res.sendFile(path.join(__dirname, "view.html"));
+    res.sendFile(path.join(__dirname, "public/view.html"));
 
 });
 app.get("/make", function(req, res) {
-    res.sendFile(path.join(__dirname, "make.html"));
+    res.sendFile(path.join(__dirname, "public/make.html"));
 });
 
 
@@ -88,6 +89,8 @@ app.post("/add", function(req, res) {
         res.sendFile(path.join(__dirname, "make.html"));
     }
 })
+
+
 
 
 app.listen(PORT, function() {
