@@ -84,6 +84,9 @@ app.get("/make", function(req, res) {
 app.get("/api/table", function(req, res){
     res.json(demoTable);
 });
+app.get("/count", function (req,res) {
+    res.json(pageCount);
+})
 
 
 app.post("/add", function(req, res) {

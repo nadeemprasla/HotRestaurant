@@ -39,6 +39,7 @@
         <div id="reservations" class="viewTable">
 
         </div>
+        <div class="countContainer">Count:<span class="count"></span></div>
     </div>
 
     <script type="text/javascript">
@@ -65,7 +66,9 @@
                     }
                 )
             });
-
+            $.get("/count", function (data, err) {
+                $(".count").text(data)
+            })
 
 
         }
